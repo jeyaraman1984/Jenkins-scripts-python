@@ -6,7 +6,7 @@ pipeline {
         sh 'python3 --version'
       }
     }
-    stage('Message!') {
+    stage('Execution!') {
       steps {
         sh 'python3 hello.py'
       }
