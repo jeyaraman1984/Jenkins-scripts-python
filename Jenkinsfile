@@ -11,7 +11,15 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
-    stage('Generate Report') {
+    stage('Install libs!') {
+      steps {
+                sh '''
+                    python -m pip install --upgrade pip
+                    pip install xlsxwriter
+                '''
+            }
+    }
+    stage('Generate Report!') {
       steps {
         sh 'python3 generateReport.py'
       }
