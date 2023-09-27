@@ -11,5 +11,10 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
+    stage('Generate Report') {
+      steps {
+        sh 'python3 generateReport.py'
+      }
+    }
   }
 }
