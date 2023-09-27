@@ -13,12 +13,10 @@ pipeline {
     }
     stage('Install libs!') {
       steps {
-        sh ''
-        '
-        python3 - m pip install--upgrade pip
-        pip install xlsxwriter
-          ''
-        '
+        sh '''
+              python -m pip install --upgrade pip
+              pip install xlsxwriter
+           '''
       }
     }
     stage('Generate Report!') {
