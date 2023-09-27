@@ -14,7 +14,7 @@ pipeline {
     stage('Install libs!') {
       steps {
         sh '''
-              python -m pip install --upgrade pip
+              python3 -m pip install --upgrade pip
               pip install xlsxwriter
            '''
       }
