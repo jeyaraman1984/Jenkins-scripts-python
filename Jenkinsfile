@@ -25,4 +25,10 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+        // Archive the generated Excel report as a build artifact.
+        archiveArtifacts artifacts: 'report.xlsx', allowEmptyArchive: true
+    }
+}
 }
