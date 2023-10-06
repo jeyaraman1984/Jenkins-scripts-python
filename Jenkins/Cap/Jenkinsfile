@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Generate Report!') {
       steps {
-        sh 'python3 generateReport.py'
+        sh 'python3 report/generateReport.py'
       }
     }
     //stage('Upload to S3') {
